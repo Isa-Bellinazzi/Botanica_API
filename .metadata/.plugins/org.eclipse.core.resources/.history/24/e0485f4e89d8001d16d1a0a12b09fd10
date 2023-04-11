@@ -1,0 +1,45 @@
+package br.com.magna.botanica.api.validation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.repository.domain.CauleRepository;
+import br.com.magna.botanica.api.repository.domain.ClasseRepository;
+import br.com.magna.botanica.api.repository.domain.FiloRepository;
+import br.com.magna.botanica.api.repository.domain.FolhagemRepository;
+import br.com.magna.botanica.api.repository.domain.OrdemRepository;
+import br.com.magna.botanica.api.repository.domain.RaizRepository;
+
+@Component
+public class ValidationCaule implements Validador {
+	
+	@Autowired 
+	FiloRepository filo;
+	
+	@Autowired 
+	ClasseRepository classe;
+	
+	@Autowired
+	OrdemRepository ordem;
+	
+	@Autowired
+	RaizRepository raiz;
+	
+	@Autowired
+	FolhagemRepository folhagem;
+	
+	@Autowired
+	CauleRepository caule;
+
+	@Override
+	public void validar(DadosCadastroPlantaRecord dados) {
+		if(caule.validandoCauleComClasse(dados.cauleId(),dados.classeId()) == null) {
+			throw new ValidationException("O caule inserido não é compatível com a classe !");
+		}
+		
+	 
+		
+	}
+
+}

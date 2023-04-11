@@ -1,0 +1,9 @@
+package br.com.magna.botanica.api.model;
+
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+
+public interface Validador {
+	
+	void validar(DadosCadastroPlantaRecord dados);
+
+}

@@ -1,0 +1,28 @@
+package br.com.magna.botanica.api.service.domain;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import br.com.magna.botanica.api.model.domain.Folhagem;
+import br.com.magna.botanica.api.record.DadosAtualizacaoPlantaRecord;
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.record.domain.DadosListagemFolhagemRecord;
+import br.com.magna.botanica.api.repository.FolhagemRepository;
+@Service
+public class FolhagemService {
+	@Autowired
+	private FolhagemRepository folhaRepository;
+	
+	public Page<DadosListagemFolhagemRecord> listagem( Pageable paginacao) {
+    return folhaRepository.findAllByAtivoTrue(paginacao).map(DadosListagemFolhagemRecord::new);
+	}
+	
+	public Folhagem validandoDadosDeFolhagem(DadosCadastroPlantaRecord dados) {
+		return folhaRepository.validandoFolhaComClasse(dados.folhagemId(),dados.classeId());
+	}
+	
+	public Folhagem validandoDadosFolhagemAtualizacao(DadosAtualizacaoPlantaRecord dados) {
+		return folhaRepository.validandoFolhaComClasse(dados.folhagemId(),dados.classeId());
+	}
+}

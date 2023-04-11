@@ -1,0 +1,29 @@
+package br.com.magna.botanica.api.service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import br.com.magna.botanica.api.model.domain.Ordem;
+import br.com.magna.botanica.api.record.DadosAtualizacaoPlantaRecord;
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.record.DadosListagemOrdemRecord;
+import br.com.magna.botanica.api.repository.OrdemRepository;
+@Service
+public class OrdemService {
+	@Autowired
+	private OrdemRepository ordemRepository;
+	
+	public Page<DadosListagemOrdemRecord> listagem( Pageable paginacao) {
+	    return ordemRepository.findAllByAtivoTrue(paginacao).map(DadosListagemOrdemRecord::new);
+		}
+
+	public Ordem validandoDadosDeOrdem(DadosCadastroPlantaRecord dados) {
+		return ordemRepository.validandoOrdemComClasse(dados.ordemId(), dados.classeId());
+	}
+
+	public Ordem validandoDadosAtualizacaoOrdem(DadosAtualizacaoPlantaRecord dados) {
+		return ordemRepository.validandoOrdemComClasse(dados.ordemId(), dados.classeId());
+	}
+
+}

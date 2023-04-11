@@ -1,0 +1,26 @@
+package br.com.magna.botanica.api.validation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.repository.domain.CauleRepository;
+import br.com.magna.botanica.api.repository.domain.ClasseRepository;
+import br.com.magna.botanica.api.repository.domain.FiloRepository;
+import br.com.magna.botanica.api.repository.domain.FolhagemRepository;
+import br.com.magna.botanica.api.repository.domain.OrdemRepository;
+import br.com.magna.botanica.api.repository.domain.RaizRepository;
+
+@Component
+public class ValidationClasse implements Validador {
+	
+	@Autowired
+	ClasseRepository classe;
+
+	@Override
+	public void validar(DadosCadastroPlantaRecord dados) {
+		if(classe.validandoClasseComFilo(dados.classeId(),dados.filoId()) == null) {
+			throw new ValidationException("A classe inserida não é compatível com o filo!");
+		}	
+	}
+}

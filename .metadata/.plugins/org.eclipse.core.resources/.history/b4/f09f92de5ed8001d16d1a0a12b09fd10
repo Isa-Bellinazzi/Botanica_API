@@ -1,0 +1,27 @@
+package br.com.magna.botanica.api.service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import br.com.magna.botanica.api.model.domain.Raiz;
+import br.com.magna.botanica.api.record.DadosAtualizacaoPlantaRecord;
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.record.DadosListagemRaizRecord;
+import br.com.magna.botanica.api.repository.RaizRepository;
+@Service
+public class RaizService {
+	@Autowired
+	private RaizRepository raizRepository;
+	
+	public Page<DadosListagemRaizRecord> listagem( Pageable paginacao) {
+    return raizRepository.findAllByAtivoTrue(paginacao).map(DadosListagemRaizRecord::new);
+	}
+	
+	public Raiz validandoDadosDeRaiz(DadosCadastroPlantaRecord dados) {
+		return raizRepository.validandoRaizComClasse(dados.raizId(),dados.classeId());
+	}
+	public Raiz validandoDadosRaizAtualizacao(DadosAtualizacaoPlantaRecord dados) {
+		return raizRepository.validandoRaizComClasse(dados.raizId(),dados.classeId());
+	}
+}

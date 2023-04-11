@@ -1,0 +1,12 @@
+INSERT INTO TB_DOM_FOLHAGEM (DESCRICAO,FK_CLASSE,ATIVO) VALUES
+	 ('PARALELINERVEA',2,true),
+	 ('RETICULADA',1,true),
+	 ('FILOIDES',3,true),
+	 ('FILOIDES',4,true),
+	 ('FILOIDES',5,true),
+	 ('LOBULADO',9,true),
+	 ('CORIACEAS',7,true),
+	 ('ACICULAR',6,true),
+	 ('SIMPLES',8,true),
+	 (' NERVURAS SECUNDARIAS',10,true),
+	 ('COMPLEXAS',11,true);

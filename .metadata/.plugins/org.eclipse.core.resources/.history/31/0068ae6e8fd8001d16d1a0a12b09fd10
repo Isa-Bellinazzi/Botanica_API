@@ -1,0 +1,19 @@
+package br.com.magna.botanica.api.validation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.repository.PlantaRepository;
+
+public class ValidationNome implements Validador {
+
+	@Autowired
+	PlantaRepository planta;
+	
+	@Override
+	public void validar(DadosCadastroPlantaRecord dados) {
+		if (planta.validaNome(dados.nome()) == null) {
+			throw new ValidationException("Já possuí uma planta registrada com esse nome, se for uma variação da espécie, use nome composto !");
+		}
+	}
+}

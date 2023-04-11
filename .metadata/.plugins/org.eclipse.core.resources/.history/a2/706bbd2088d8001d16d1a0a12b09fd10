@@ -1,0 +1,9 @@
+package br.com.magna.botanica.api.model;
+
+public class ValidationException extends RuntimeException {
+	
+	 public ValidationException(String msg) {
+	        super(msg);
+	    }
+
+}

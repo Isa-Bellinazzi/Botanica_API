@@ -1,0 +1,43 @@
+package br.com.magna.botanica.api.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.repository.domain.CauleRepository;
+import br.com.magna.botanica.api.repository.domain.ClasseRepository;
+import br.com.magna.botanica.api.repository.domain.FiloRepository;
+import br.com.magna.botanica.api.repository.domain.FolhagemRepository;
+import br.com.magna.botanica.api.repository.domain.OrdemRepository;
+import br.com.magna.botanica.api.repository.domain.RaizRepository;
+
+public class Validation implements Validador {
+	
+	@Autowired 
+	FiloRepository filo;
+	
+	@Autowired 
+	ClasseRepository classe;
+	
+	@Autowired
+	OrdemRepository ordem;
+	
+	@Autowired
+	RaizRepository raiz;
+	
+	@Autowired
+	FolhagemRepository folhagem;
+	
+	@Autowired
+	CauleRepository caule;
+
+	@Override
+	public void validar(DadosCadastroPlantaRecord dados) {
+		if(caule.validandoCauleComClasse(dados.cauleId(),dados.classeId()) == null) {
+			
+		}
+		
+	 
+		
+	}
+
+}

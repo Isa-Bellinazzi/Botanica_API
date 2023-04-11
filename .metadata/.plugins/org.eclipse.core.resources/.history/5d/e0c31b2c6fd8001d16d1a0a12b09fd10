@@ -1,0 +1,12 @@
+INSERT INTO TB_DOM_RAIZ (DESCRICAO,FK_CLASSE,ATIVO) VALUES
+	 ('RIZOIDES',3,true),
+	 ('RIZOIDES',4,true),
+	 ('RIZOIDES',5,true),
+	 ('ADVENTICIAS',11,true),
+	 ('ENDOGENAS',10,true),
+	 ('FASCICULADA',2,true),
+	 ('PIVOTANTE',1,true),
+	 ('AXIAL',6,true),
+	 ('AXIAL',7,true),
+	 ('AXIAL',8,true),
+	 ('AXIAL',9,true);

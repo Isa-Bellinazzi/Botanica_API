@@ -1,0 +1,79 @@
+package br.com.magna.botanica.api.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import br.com.magna.botanica.api.model.Planta;
+import br.com.magna.botanica.api.model.domain.Caule;
+import br.com.magna.botanica.api.model.domain.Classe;
+import br.com.magna.botanica.api.model.domain.Filo;
+import br.com.magna.botanica.api.model.domain.Ordem;
+import br.com.magna.botanica.api.model.domain.Raiz;
+import br.com.magna.botanica.api.record.DadosAtualizacaoPlantaRecord;
+import br.com.magna.botanica.api.record.DadosCadastroPlantaRecord;
+import br.com.magna.botanica.api.record.DadosDetalhamentoPlantaRecord;
+import br.com.magna.botanica.api.repository.PlantaRepository;
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("test")
+class ControllerDomainTest {
+	
+	@Autowired
+	private TestRestTemplate restTemplate;
+
+	@Test
+	void testListagemCaules() {
+		ResponseEntity<Caule> responseEntity = restTemplate.getForEntity("/caules/listagem", Caule.class);
+		Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+		Assert.assertNotNull(responseEntity.getBody());
+	}
+	
+	@Test
+	void testListagemClasses() {
+		ResponseEntity<Classe> responseEntity = restTemplate.getForEntity("/classes/listagem", Classe.class);
+		Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+		Assert.assertNotNull(responseEntity.getBody());
+	}
+	
+	@Test
+	void testListagemFilos() {
+		ResponseEntity<Filo> responseEntity = restTemplate.getForEntity("/filos/listagem", Filo.class);
+		Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+		Assert.assertNotNull(responseEntity.getBody());
+	}
+	
+	@Test
+	void testListagemFolhagens() {
+		ResponseEntity<Caule> responseEntity = restTemplate.getForEntity("/folhagens/listagem", Caule.class);
+		Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+		Assert.assertNotNull(responseEntity.getBody());
+	}
+	
+	@Test
+	void testListagemOrdens() {
+		ResponseEntity<Ordem> responseEntity = restTemplate.getForEntity("/ordens/listagem", Ordem.class);
+		Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+		Assert.assertNotNull(responseEntity.getBody());
+	}
+	
+	@Test
+	void testListagemRaiz() {
+		ResponseEntity<Raiz> responseEntity = restTemplate.getForEntity("/raizes/listagem", Raiz.class);
+		assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+		assertNotNull(responseEntity.getBody());
+	}
+}

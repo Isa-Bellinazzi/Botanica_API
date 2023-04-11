@@ -1,0 +1,5 @@
+package br.com.magna.botanica.api.validation;
+
+public enum ValidationNome {
+
+}

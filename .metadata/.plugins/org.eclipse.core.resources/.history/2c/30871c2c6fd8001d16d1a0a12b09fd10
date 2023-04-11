@@ -1,0 +1,12 @@
+NSERT INTO TB_DOM_CAULE (DESCRICAO,FK_CLASSE,ATIVO) VALUES
+	 ('CAULOIDE',3,true),
+	 ('CAULOIDE',4,true),
+	 ('CAULOIDE',5,true),
+	 ('ESPORIFEROS',10,true),
+	 ('RAMOSO',11,true),
+	 ('DESORDENADO',2,true),
+	 ('CILINDRICO',1,true),
+	 ('LENHOSO',6,true),
+	 ('LENHOSO',7,true),
+	 ('LENHOSO',8,true),
+	 ('LENHOSO',9,true);

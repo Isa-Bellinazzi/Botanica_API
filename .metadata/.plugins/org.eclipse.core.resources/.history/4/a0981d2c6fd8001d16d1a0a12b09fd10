@@ -1,0 +1,5 @@
+INSERT INTO TB_DOM_FILO (DESCRICAO,FOLHA_VERDADEIRA,CAULE_VERDADEIRO,RAIZ_VERDADEIRA,FRUTO,FLOR,SEMENTE,ATIVO) VALUES
+	 ('ANGIOSPERMA',true,true,true,true,true,true,true),
+	 ('BRIOFITA',false,false,false,false,false,false,true),
+	 ('GIMNOSPERMA',true,true,true,false,false,true,true),
+	 ('PTERIDOFITA',true,true,true,false,false,false,true);

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="botanica" tests="15" started="15" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.magna.botanica.api.controller.RaizControllerTest" time="0.829" displayname="RaizControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.RaizControllerTest]">
+    <testcase name="testListagemRaiz" classname="br.com.magna.botanica.api.controller.RaizControllerTest" time="0.829" displayname="testListagemRaiz()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.RaizControllerTest]/[method:testListagemRaiz()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.controller.ClasseControllerTest" time="0.042" displayname="ClasseControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.ClasseControllerTest]">
+    <testcase name="testListagemClasses" classname="br.com.magna.botanica.api.controller.ClasseControllerTest" time="0.042" displayname="testListagemClasses()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.ClasseControllerTest]/[method:testListagemClasses()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.controller.PlantaControllerTest" time="0.442" displayname="PlantaControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.PlantaControllerTest]">
+    <testcase name="testExcluir" classname="br.com.magna.botanica.api.controller.PlantaControllerTest" time="0.158" displayname="testExcluir()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.PlantaControllerTest]/[method:testExcluir()]"/>
+    <testcase name="testCadastrar" classname="br.com.magna.botanica.api.controller.PlantaControllerTest" time="0.133" displayname="testCadastrar()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.PlantaControllerTest]/[method:testCadastrar()]"/>
+    <testcase name="testAtualizar" classname="br.com.magna.botanica.api.controller.PlantaControllerTest" time="0.071" displayname="testAtualizar()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.PlantaControllerTest]/[method:testAtualizar()]"/>
+    <testcase name="testListar" classname="br.com.magna.botanica.api.controller.PlantaControllerTest" time="0.057" displayname="testListar()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.PlantaControllerTest]/[method:testListar()]"/>
+    <testcase name="testDetalhar" classname="br.com.magna.botanica.api.controller.PlantaControllerTest" time="0.02" displayname="testDetalhar()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.PlantaControllerTest]/[method:testDetalhar()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.controller.OrdemControllerTest" time="0.027" displayname="OrdemControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.OrdemControllerTest]">
+    <testcase name="testListagemOrdens" classname="br.com.magna.botanica.api.controller.OrdemControllerTest" time="0.027" displayname="testListagemOrdens()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.OrdemControllerTest]/[method:testListagemOrdens()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.controller.FolhagemControllerTest" time="0.025" displayname="FolhagemControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.FolhagemControllerTest]">
+    <testcase name="testListagemFolhagens" classname="br.com.magna.botanica.api.controller.FolhagemControllerTest" time="0.025" displayname="testListagemFolhagens()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.FolhagemControllerTest]/[method:testListagemFolhagens()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.controller.CauleControllerTest" time="0.032" displayname="CauleControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.CauleControllerTest]">
+    <testcase name="testListagemCaules" classname="br.com.magna.botanica.api.controller.CauleControllerTest" time="0.032" displayname="testListagemCaules()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.CauleControllerTest]/[method:testListagemCaules()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.controller.FiloControllerTest" time="0.019" displayname="FiloControllerTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.FiloControllerTest]">
+    <testcase name="testListagemFilos" classname="br.com.magna.botanica.api.controller.FiloControllerTest" time="0.019" displayname="testListagemFilos()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.controller.FiloControllerTest]/[method:testListagemFilos()]"/>
+  </testsuite>
+  <testsuite name="br.com.magna.botanica.api.exceptions.TratadorDeErrosTest" time="0.138" displayname="TratadorDeErrosTest" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.exceptions.TratadorDeErrosTest]">
+    <testcase name="testAtualizarDadosInvalidos" classname="br.com.magna.botanica.api.exceptions.TratadorDeErrosTest" time="0.03" displayname="testAtualizarDadosInvalidos()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.exceptions.TratadorDeErrosTest]/[method:testAtualizarDadosInvalidos()]"/>
+    <testcase name="testCadastrandoRegistroJaCadastradi" classname="br.com.magna.botanica.api.exceptions.TratadorDeErrosTest" time="0.052" displayname="testCadastrandoRegistroJaCadastradi()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.exceptions.TratadorDeErrosTest]/[method:testCadastrandoRegistroJaCadastradi()]"/>
+    <testcase name="testCadastrarDadosInvalidos" classname="br.com.magna.botanica.api.exceptions.TratadorDeErrosTest" time="0.014" displayname="testCadastrarDadosInvalidos()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.exceptions.TratadorDeErrosTest]/[method:testCadastrarDadosInvalidos()]"/>
+    <testcase name="testValidationErrors" classname="br.com.magna.botanica.api.exceptions.TratadorDeErrosTest" time="0.037" displayname="testValidationErrors()" uniqueid="[engine:junit-jupiter]/[class:br.com.magna.botanica.api.exceptions.TratadorDeErrosTest]/[method:testValidationErrors()]"/>
+  </testsuite>
+</testrun>
